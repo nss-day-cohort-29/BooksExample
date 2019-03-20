@@ -86,10 +86,10 @@ namespace Books
                 select new Book(t, t.Length * 100)
             ).ToList();
 
-            List<Book> filteredBooks = (from b in books1
-                                        where b.PageCount > 2000
-                                        orderby b.Title
-                                        select b).ToList();
+            List<Book> filteredBooks = (from taco in books1
+                                        where taco.PageCount > 2000
+                                        orderby taco.Title
+                                        select taco).ToList();
 
             Console.ReadKey();
         }
